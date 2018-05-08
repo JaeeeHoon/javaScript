@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript 과제 - CAB 구구단</title>
+		<style>
+			a {
+				text-decoration: none;
+			}
+			h1 {
+				border:6px solid green;
+				font-size: 40px;
+				padding:20px;
+				text-align:center;
+				margin:20px;
+				height:50px; 
+				background-color: white;
+				display:block;
+			}
+			h2{
+				/*text-align: ;*/
+				border:3px;
+			}
+			h3 {
+				text-align: right;
+				padding:20px;
+				border-right :11px solid gray;
+				margin-right: 18px;
+			}
+
+			#content {
+				border : 3px solid grey;
+				padding : 10px;
+				margin-left : 18px;
+				margin-right: 18px;
+				height: 500px;	
+			}
+
+			#left {
+				border:5px solid grey;
+				text-align: center;
+				display: block;
+				position: relative;
+				float : left;
+				margin-left: 18px;
+			}
+			#right {
+				border:5px solid grey;
+				text-align: center;
+				display:block;
+				position: relative;
+				float:left;
+				margin-right: 10px;
+				margin-left: 350px;
+			}
+
+			.box
+			 {
+			 	font-size: 50px;
+			 	border:3px solid grey;
+				padding : 25px;
+				width:auto;
+				height:auto;
+				margin:8px;
+			}
+
+		</style>
+</head>
+
+<script>
+	function gugudan(i) {
+		var i,k;
+        var q = "";
+			for (k=1; k<10; k++) {
+				q += i+"x"+k+"="+ i*k+"<br/>";
+			}
+        
+        document.getElementById("right").innerHTML = q;
+	}
+
+	//alert(gugudan(i));
+
+</script>
+
+<body>
+	<header>
+		<div>
+			<h1><a href="0406_study.html">C.A.B 구구단</a></h1>
+		</div>
+		<div>
+			<h3>C.A.B JavaScript Study </h3>
+		</div>
+	</header>
+	<section>
+		<div id="content">
+			<div id="left">
+				<h2> #단을 선택하세요# </h2>
+
+				<input class="box" type="button" onclick="gugudan(i=1)" value="1단">
+				<input class="box" type="button" onclick="gugudan(i=2)" value="2단">
+				<input class="box" type="button" onclick="gugudan(i=3)" value="3단"><br />
+				<input class="box" type="button" onclick="gugudan(i=4)" value="4단">
+				<input class="box" type="button" onclick="gugudan(i=5)" value="5단">
+				<input class="box" type="button" onclick="gugudan(i=6)" value="6단"><br />
+				<input class="box" type="button" onclick="gugudan(i=7)" value="7단">
+				<input class="box" type="button" onclick="gugudan(i=8)" value="8단">
+				<input class="box" type="button" onclick="gugudan(i=9)" value="9단"><br />
+			</div>
+			<div id="right">
+				구구단을 외자~ 구구단을 외자~
+			</div>	
+
+		</div>
+	</section>
+</body>
+</html>
